@@ -1,0 +1,1702 @@
+{
+	"info": {
+		"_postman_id": "8b1e72fb-25ae-4fb1-83fd-94e3c3e2a1d3",
+		"name": "Cinema Booking Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Categories",
+			"item": [
+				{
+					"name": "Get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/userCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"userCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user category by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/userCategories/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"userCategories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user categories by Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/userCategories/type/SILVER",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"userCategories",
+								"type",
+								"SILVER"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create new user type Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"andrei.crixus\",\r\n    \"password\": \"1234\",\r\n    \"name\": \"Andrei Andrei\",\r\n    \"email\": \"andrei.andrei@yahoo.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/users/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users",
+								"client"
+							]
+						},
+						"description": "Create New User"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new user type Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"andrei andrei\",\r\n    \"password\": \"1234\",\r\n    \"name\": \"Andrei Andrei\",\r\n    \"email\": \"andrei.andrei@yahoo.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/users/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update UserCategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"userCategoryId\": 3 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   \r\n{\r\n\"username\": \"andrei\",\r\n\"password\": \"1234\"\r\n } ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Get All Locations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8090/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"city\": \"Mioveni\",\r\n        \"number\": \"2245\",\r\n        \"postalCode\": 26,\r\n        \"street\": \"Test\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/locations/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"locations",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/locations/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"locations",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cinemas",
+			"item": [
+				{
+					"name": "Create new Cinema",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"locationId\": \"2\",\r\n    \"name\": \"Cinema BOFLO\",\r\n    \"phoneNumber\": \"0724-449-333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/cinemas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"cinemas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Cinemas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/cinemas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"cinemas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cinema by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/locations/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"locations",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cinema by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/locations/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"locations",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CinemaHalls",
+			"item": [
+				{
+					"name": "Create new Hall for a Cinema",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cinemaId\": 2,\r\n    \"name\": \"Test\",\r\n    \"numberSeats\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/halls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"halls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Halls",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/halls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"halls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get hall by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/halls/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"halls",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a HALL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/halls/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"halls",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Add new Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"The Rock TEST\",\r\n    \"durationMinutes\": \"120\",\r\n    \"is3D\": true,\r\n    \"type\": \"COMEDY\",\r\n    \"rating\": 0,\r\n    \"description\": \"Test Movie\",\r\n    \"releaseYear\": 2015\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/movies/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movies",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "See all the seats ( available or not) for a movie Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMovie\": 2,\r\n    \"available\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/movies/seats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movies",
+								"seats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seats",
+			"item": [
+				{
+					"name": "Create a new Seat to a Hall",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cinemaHallId\": 1,\r\n    \"numberSeat\": 1,\r\n    \"rowSeat\": 1,\r\n    \"columnSeat\": 1,\r\n    \"isReserved\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/seats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"seats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get seat by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/seats/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"seats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Seat By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/seats/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"seats",
+								"19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Showtimes",
+			"item": [
+				{
+					"name": "Add a showtime to a Hall of Cinema",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieId\": 5,\r\n    \"cinemaHallId\": 1,\r\n    \"date\": \"23/01/2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/movieShowtimes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movieShowtimes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all showTimes ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/movieShowtimes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movieShowtimes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get showTime by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/movieShowtimes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movieShowtimes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a showtime by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/movieShowtimes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"movieShowtimes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Create a new Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"liked\": true,\r\n    \"stars\": 4,\r\n    \"description\": \"Cel mai smecher film 4 stele\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Review By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/reviews/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/reviews/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reviews",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Create a new Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieShowtimeId\": 2,\r\n    \"price\": 10,\r\n    \"numberSeat\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ticket by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/tickets/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"tickets",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a ticket",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/tickets/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"tickets",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservations",
+			"item": [
+				{
+					"name": "Create a new Reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"ticketId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/reservations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reservation By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/reservations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reservations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete reservation By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/reservations/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reservations",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/reservations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all reservations for a user by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/reservations/reservationsUser/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reservations",
+								"reservationsUser",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Reservation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idReservation\": 4,\r\n    \"idUser\": 2\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/reservations/confirm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"reservations",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "For Presentations",
+			"item": [
+				{
+					"name": "Guest",
+					"item": [
+						{
+							"name": "Get Movies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Movies filtrated by TYPE",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/movies?type=ACTION",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "ACTION"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Movies filtrated by TYPE Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/movies?type=COMEDY",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "COMEDY"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Movies filtrated by TYPE and if is 3D",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/movies?type=ACTION&is3D=true",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "ACTION"
+										},
+										{
+											"key": "is3D",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Movies filtrated by TYPE and RATING",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/movies?type=ACTION&rating=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "ACTION"
+										},
+										{
+											"key": "rating",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Movies filtrated by RATING",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/movies?rating=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movies"
+									],
+									"query": [
+										{
+											"key": "rating",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "See all the seats ( available or not) for a movie Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idMovie\": 2,\r\n    \"available\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movies/seats",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movies",
+										"seats"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create new user type Client Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"florin67\",\r\n    \"password\": \"1234\",\r\n    \"name\": \"Badita Bogdan\",\r\n    \"email\": \"bogdan.florin27@yahoo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/users/client",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"users",
+										"client"
+									]
+								},
+								"description": "Create New User"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "Create new user type Client Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"florin68\",\r\n    \"password\": \"1234\",\r\n    \"name\": \"Badita Bogdan\",\r\n    \"email\": \"bogdan.florin27@yahoo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/users/client",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"users",
+										"client"
+									]
+								},
+								"description": "Create New User"
+							},
+							"response": []
+						},
+						{
+							"name": "Login User Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "   \r\n{\r\n\"username\": \"florin67\",\r\n\"password\": \"1234\"\r\n } ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "See all the seats ( available or not) for a movie",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idMovie\": 2,\r\n    \"available\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/movies/seats",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"movies",
+										"seats"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create full reservation for a client SEAT IS RESERVED",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"idSeat\": 1,\r\n    \"movieShowtimeId\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/reservations/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"reservations",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create full reservation for a client SEAT FREE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"idSeat\": 2,\r\n    \"movieShowtimeId\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/reservations/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"reservations",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Reservations Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/reservations",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"reservations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all tickets Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/tickets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"tickets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "History of Reservations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/reservations/reservationsUser/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"reservations",
+										"reservationsUser",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get History of reservatios of a user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idUser\":2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/users/client/history",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"users",
+										"client",
+										"history"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get seat by ID Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/seats/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"seats",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Create new user type Admin Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"florin67\",\r\n        \"password\": \"1234\",\r\n    \"name\": \"Badita Bogdan\",\r\n    \"email\": \"bogdan.florin27@yahoo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/users/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"users",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login User Copy 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "   \r\n{\r\n\"username\": \"andrei\",\r\n\"password\": \"1234\"\r\n } ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
